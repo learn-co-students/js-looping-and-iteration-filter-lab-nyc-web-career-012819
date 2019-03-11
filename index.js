@@ -5,9 +5,7 @@ function findMatching(drivers, expression) {
 function fuzzyMatch(drivers, expression) {
   return drivers.filter(function (name) { 
     regex = new RegExp(`^${expression}`, "i");
-    if (regex.test(name)) {
-      return name;
-    } 
+    return regex.test(name);
   });
 }
 
